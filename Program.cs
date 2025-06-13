@@ -45,5 +45,22 @@ namespace Act1
             return scores;
         }
 
+        static double CalculateAverage(List<int> scores)
+        {
+            int total = 0;
+            foreach (int score in scores)
+            {
+                total += score;
+            }
+            return (double)total / scores.Count;
+        }
+
+        static string GetRemarks(double average)
+        {
+            if (average >= 90) return "Excellent";
+            else if (average >= 75) return "Passed";
+            else return "Failed";
+        }
+
     }
 }
