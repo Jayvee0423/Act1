@@ -73,9 +73,9 @@ namespace Act1
 
         static string GetRemarks(double average)
         {
-            if (average >= 90) return "Excellent";
+            if (average >= 90) return "Failed";     // Wrong
             else if (average >= 75) return "Passed";
-            else return "Failed";
+            else return "Excellent";                // Wrong
         }
 
         static void DisplayResult(string name, double average, string remarks)
