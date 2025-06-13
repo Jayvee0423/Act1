@@ -15,5 +15,15 @@ namespace Act1
         {
             Console.WriteLine("===== Student Grading System =====\n");
         }
+       
+        string name = GetStudentName();
+        Console.WriteLine($"Student: {name}");
+
+        static string GetStudentName()
+        {
+            Console.Write("Enter student name: ");
+            return Console.ReadLine();
+        }
+
     }
 }
