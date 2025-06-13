@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Act1
 {
@@ -8,16 +9,31 @@ namespace Act1
         {
             ShowHeader();
 
-            Console.WriteLine("Feature 1: Base setup with header only.");
+            string choice = "Y";
+
+            while (choice.ToUpper() == "Y")
+            {
+                string name = GetStudentName();
+                List<int> scores = GetStudentScores();
+
+                double average = CalculateAverage(scores);
+                string remarks = GetRemarks(average);
+
+                DisplayResult(name, average, remarks);
+
+                Console.Write("\nDo you want to enter another student? (Y/N): ");
+                choice = Console.ReadLine();
+                Console.WriteLine();
+            }
+
+            Console.WriteLine("Program ended. Press any key to close.");
+            Console.ReadKey();
         }
 
         static void ShowHeader()
         {
             Console.WriteLine("===== Student Grading System =====\n");
         }
-       
-        string name = GetStudentName();
-        Console.WriteLine($"Student: {name}");
 
         static string GetStudentName()
         {
@@ -62,5 +78,12 @@ namespace Act1
             else return "Failed";
         }
 
+        static void DisplayResult(string name, double average, string remarks)
+        {
+            Console.WriteLine("\n--- Result ---");
+            Console.WriteLine($"Student: {name}");
+            Console.WriteLine($"Average: {average:F2}");
+            Console.WriteLine($"Remarks: {remarks}");
+        }
     }
 }

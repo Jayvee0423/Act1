@@ -12,3 +12,4 @@
 /Users/jayvee/Desktop/APPDEV/Act1/obj/Debug/net8.0/Act1.pdb
 /Users/jayvee/Desktop/APPDEV/Act1/obj/Debug/net8.0/Act1.genruntimeconfig.cache
 /Users/jayvee/Desktop/APPDEV/Act1/obj/Debug/net8.0/ref/Act1.dll
+/Users/jayvee/Desktop/APPDEV/Act1/obj/Debug/net8.0/Act1.sourcelink.json
